@@ -913,7 +913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ff89d13fd560cf4980ceef70046ef5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mdata: {fileID: 0}
+  Mdata: {fileID: 11400000, guid: fd862fdd291396e4d9b21f610e176e1f, type: 2}
   Back: 0
   OriPos: {x: 0, y: 0, z: 0}
   Hp: 0
@@ -1273,7 +1273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ff89d13fd560cf4980ceef70046ef5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mdata: {fileID: 0}
+  Mdata: {fileID: 11400000, guid: fd862fdd291396e4d9b21f610e176e1f, type: 2}
   Back: 0
   OriPos: {x: 0, y: 0, z: 0}
   Hp: 0
@@ -1490,7 +1490,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 715522430}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: NomalAttack
+        m_MethodName: NormalAttack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1554,7 +1554,7 @@ GameObject:
   - component: {fileID: 715522431}
   m_Layer: 0
   m_Name: priest
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1828,7 +1828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ff89d13fd560cf4980ceef70046ef5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mdata: {fileID: 0}
+  Mdata: {fileID: 11400000, guid: fd862fdd291396e4d9b21f610e176e1f, type: 2}
   Back: 0
   OriPos: {x: 0, y: 0, z: 0}
   Hp: 0
@@ -2291,7 +2291,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1469097938}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: NomalAttack
+        m_MethodName: NormalAttack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2888,7 +2888,7 @@ GameObject:
   - component: {fileID: 1469097939}
   m_Layer: 0
   m_Name: witch
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7282,7 +7282,7 @@ GameObject:
   - component: {fileID: 1788342495}
   m_Layer: 0
   m_Name: swordman
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7677,7 +7677,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1788342494}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: NomalAttack
+        m_MethodName: NormalAttack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7932,9 +7932,9 @@ MonoBehaviour:
   Player1: {fileID: 1788342490}
   Player2: {fileID: 1469097934}
   Player3: {fileID: 715522426}
-  Monster1: {fileID: 0}
-  Monster2: {fileID: 0}
-  Monster3: {fileID: 0}
+  Monster1: {fileID: 505831245}
+  Monster2: {fileID: 717418241}
+  Monster3: {fileID: 537634824}
   Status: []
   Turn: {fileID: 1970809228}
   TurnText: {fileID: 1901949086}

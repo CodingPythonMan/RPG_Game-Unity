@@ -71,8 +71,8 @@ public class GameManager : MonoBehaviour
     {
         // 전체턴
         Turn.value = ct.Timer(TurnTime);
-
-        if(Turn.value >= TurnTime)
+        
+        if (Turn.value >= TurnTime)
         {
             if (PlayTurn)
             {
@@ -81,17 +81,15 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                TurnText.text = "Monster Turn";
                 MonsterTurn = true;
-
+                TurnText.text = "Monster Turn";
+                
                 // 몬스터 공격
                 StartCoroutine("MonsterAttack");
             }
             PlayTurn = !PlayTurn;
             CurrTurn = PlayTurn;
         }
-
-        print("CurrTurn" + CurrTurn);
 
         // 상태표시창
         StatusShow();
@@ -103,7 +101,7 @@ public class GameManager : MonoBehaviour
         int i = 0;
         while (MonsterTurn)
         {
-            if(L_Monster.Count != 0)
+            if (L_Monster.Count != 0)
             {
                 L_Monster[(i++)%L_Monster.Count].GetComponent<Monster>().NormalAttack();
             }

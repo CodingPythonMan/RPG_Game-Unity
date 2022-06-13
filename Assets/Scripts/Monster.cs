@@ -33,7 +33,7 @@ public class Monster : MonoBehaviour
         StartCoroutine("NormalAttackCT");
     }
 
-    IEnumerable NormalAttackCT()
+    IEnumerator NormalAttackCT()
     {
         Back = false;
         int r = Random.Range(0, Player.Length);
@@ -41,7 +41,7 @@ public class Monster : MonoBehaviour
         {
             if(Player[r] != null)
             {
-                rig.MovePosition(Vector3.Lerp(transform.position, Player[r].transform.position, 20 * Time.deltaTime));
+                rig.MovePosition(Vector3.Lerp(transform.position, Player[r].transform.position, 20*Time.deltaTime));
                 if(Vector3.Distance(transform.position, Player[r].transform.position) <= 0.5f)
                 {
                     ani.SetTrigger("attack");

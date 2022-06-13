@@ -23,16 +23,16 @@ public class Player : MonoBehaviour
         ani = GetComponent<Animator>();
     }
 
-    public void NomalAttack()
+    public void NormalAttack()
     {
         if (GameManager.ins.CurrTurn == false)
         {
             // 플레이어 공격
-            StartCoroutine("NomalAttackCT");
+            StartCoroutine("NormalAttackCT");
         }
     }
 
-    IEnumerator NomalAttackCT()
+    IEnumerator NormalAttackCT()
     {
         Back = false; // 플레이어가 공격하고 돌아왔는지 체크하는 변수
         int r = Random.Range(0, Monster.Length); // 몬스터를 랜덤하게 타겟팅
