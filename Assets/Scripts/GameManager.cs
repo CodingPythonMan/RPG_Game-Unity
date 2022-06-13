@@ -83,6 +83,9 @@ public class GameManager : MonoBehaviour
             {
                 TurnText.text = "Monster Turn";
                 MonsterTurn = true;
+
+                // 몬스터 공격
+                StartCoroutine("MonsterAttack");
             }
             PlayTurn = !PlayTurn;
             CurrTurn = PlayTurn;
@@ -92,6 +95,21 @@ public class GameManager : MonoBehaviour
 
         // 상태표시창
         StatusShow();
+    }
+
+
+    IEnumerator MonsterAttack()
+    {
+        int i = 0;
+        while (MonsterTurn)
+        {
+            if(L_Monster.Count != 0)
+            {
+                L_Monster[(i++)%L_Monster.Count].GetComponent<Monster>().NormalAttack();
+            }
+
+            yield return new WaitForSeconds(2f);
+        }
     }
 
     // 상태 표시 함수
