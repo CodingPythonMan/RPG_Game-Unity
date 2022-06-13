@@ -7370,7 +7370,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -302, y: 0}
+  m_AnchoredPosition: {x: -319, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1901949086
@@ -7535,10 +7535,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dbfc436ad3aedb4b9348b98817b6aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayTurn: 1
+  MonsterTurn: 1
+  CurrTurn: 0
   Player1: {fileID: 1788342490}
   Player2: {fileID: 1469097934}
   Player3: {fileID: 715522426}
   Status: []
+  Turn: {fileID: 1970809228}
+  TurnText: {fileID: 1901949086}
+  TurnTime: 10
 --- !u!4 &2123649400
 Transform:
   m_ObjectHideFlags: 0
