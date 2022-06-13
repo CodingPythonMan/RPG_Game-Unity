@@ -10,7 +10,7 @@ public class CoolTime
     // Start is called before the first frame update
     void Start()
     {
-        CoolCnt = 0;
+        CoolCnt = Time.time;
     }
 
     public float Timer(float t)
