@@ -47,7 +47,9 @@ public class Player : MonoBehaviour
                     // 공격모션
                     ani.SetTrigger("attack");
                     // 공격사운드
-                    // 공격데미지
+                    // 몬스터 공격데미지
+                    Monster[r].GetComponent<Monster>().Damage(Pdata.Attack);
+
                     yield return new WaitForSeconds(0.3f);
                     Back = true;
 
