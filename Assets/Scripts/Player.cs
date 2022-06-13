@@ -45,6 +45,7 @@ public class Player : MonoBehaviour
                 if (Vector3.Distance(transform.position, Monster[r].transform.position) <= 0.5f)
                 {
                     // 공격모션
+                    ani.SetTrigger("attack");
                     // 공격사운드
                     // 공격데미지
                     yield return new WaitForSeconds(0.3f);
@@ -64,6 +65,19 @@ public class Player : MonoBehaviour
         if(Back == true)
         {
             rig.MovePosition(Vector3.Lerp(transform.position, OriPos, 20*Time.deltaTime));
+        }
+    }
+
+    public void Damage(int Attack)
+    {
+        Pdata.Hp -= Attack;
+        ani.SetTrigger("damage");
+        // 데미지 텍스트 
+
+        if(Pdata.Hp <= 0)
+        {
+            GameManager.ins.D_Player.Remove(Pdata.Job);
+            Destroy(gameObject);
         }
     }
 }
