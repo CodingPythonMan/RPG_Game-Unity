@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -39,6 +40,10 @@ public class GameManager : MonoBehaviour
 
     CoolTime ct;
 
+    // 캔버스 GameOver
+    public GameObject GameOver;
+    public GameObject GameWin;
+
     private void Awake()
     {
         ins = this;
@@ -64,11 +69,20 @@ public class GameManager : MonoBehaviour
         swordmanText = Status[0].GetComponentsInChildren<Text>();
         priestText = Status[1].GetComponentsInChildren<Text>();
         witchText = Status[2].GetComponentsInChildren<Text>();
+
+        // 캔버스 초기화
+        GameOver.SetActive(false);
+        GameWin.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
         // 전체턴
         Turn.value = ct.Timer(TurnTime);
         
@@ -96,8 +110,27 @@ public class GameManager : MonoBehaviour
         {
             StatusShow();
         }
+
+        if (D_Player.Count == 0)
+        {
+            GameOver.SetActive(true);
+        }
+
+        if (L_Monster.Count == 0)
+        {
+            GameWin.SetActive(true);
+        }
     }
 
+    public void Win()
+    {
+        SceneManager.LoadScene("Main");
+    }
+
+    public void Over()
+    {
+        SceneManager.LoadScene("Main");
+    }
 
     IEnumerator MonsterAttack()
     {
