@@ -13,15 +13,22 @@ public class SoundManager : MonoBehaviour
 
     public AudioClip[] AttackSound;
 
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        myAudio = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayerAttackSound(int num)
     {
-        
+        myAudio.PlayOneShot(AttackSound[num]);
     }
 }
