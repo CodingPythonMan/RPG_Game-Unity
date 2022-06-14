@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -19,6 +20,9 @@ public class Player : MonoBehaviour
     // 마법공격
     public GameObject Explosion;
 
+    // 데미지 캔버스
+    public GameObject DamageCanvas;
+    TextMeshProUGUI TMPdamage;
 
     // Start is called before the first frame update
     void Start()
@@ -131,8 +135,14 @@ public class Player : MonoBehaviour
         Pdata.Hp -= Attack;
         ani.SetTrigger("damage");
         // 데미지 텍스트 
+        GameObject go = Instantiate(DamageCanvas, transform.position, Quaternion.identity);
+        // 캔버스에 몬스터를 부모로 하겠다.
+        go.transform.SetParent(transform);
 
-        if(Pdata.Hp <= 0)
+        TMPdamage = go.GetComponentInChildren<TextMeshProUGUI>();
+        TMPdamage.text = "" + Attack;
+
+        if (Pdata.Hp <= 0)
         {
             GameManager.ins.D_Player.Remove(Pdata.Job);
             Destroy(gameObject);

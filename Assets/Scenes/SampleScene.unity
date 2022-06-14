@@ -918,6 +918,7 @@ MonoBehaviour:
   OriPos: {x: 0, y: 0, z: 0}
   Hp: 0
   MaxHp: 0
+  DamageCanvas: {fileID: 7391777244062002976, guid: ed1ff4dc1e8305849ad8d96e3ef672a1, type: 3}
 --- !u!61 &505831250
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1159,7 +1160,7 @@ GameObject:
   - component: {fileID: 525250710}
   - component: {fileID: 525250709}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: StatusCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1375,6 +1376,7 @@ MonoBehaviour:
   OriPos: {x: 0, y: 0, z: 0}
   Hp: 0
   MaxHp: 0
+  DamageCanvas: {fileID: 7391777244062002976, guid: ed1ff4dc1e8305849ad8d96e3ef672a1, type: 3}
 --- !u!61 &537634829
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1762,6 +1764,7 @@ MonoBehaviour:
   MagicAura: {fileID: 100008, guid: e3d819d8722fa1f47a3f68574b56dfb3, type: 3}
   T_MagicAura: {fileID: 774287577}
   Explosion: {fileID: 1545806602296978, guid: 9e4577abe56a95f4a91d29a0473cd30c, type: 3}
+  DamageCanvas: {fileID: 7391777244062002976, guid: ed1ff4dc1e8305849ad8d96e3ef672a1, type: 3}
 --- !u!61 &715522431
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1934,6 +1937,7 @@ MonoBehaviour:
   OriPos: {x: 0, y: 0, z: 0}
   Hp: 0
   MaxHp: 0
+  DamageCanvas: {fileID: 7391777244062002976, guid: ed1ff4dc1e8305849ad8d96e3ef672a1, type: 3}
 --- !u!61 &717418246
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3155,6 +3159,7 @@ MonoBehaviour:
   MagicAura: {fileID: 100006, guid: 60bc526f4be1e044ab9e46340b82ffb3, type: 3}
   T_MagicAura: {fileID: 1545740852}
   Explosion: {fileID: 5028897184382236289, guid: d5ab4d000bea43a46ac1a41706615592, type: 3}
+  DamageCanvas: {fileID: 7391777244062002976, guid: ed1ff4dc1e8305849ad8d96e3ef672a1, type: 3}
 --- !u!61 &1469097939
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7783,6 +7788,7 @@ MonoBehaviour:
   MagicAura: {fileID: 100000, guid: 7b56cd9b663f23f429e131a54ec87db0, type: 3}
   T_MagicAura: {fileID: 1605015820}
   Explosion: {fileID: 5964012549129492698, guid: 91ef12e95f064f24ebe9b3800e2db767, type: 3}
+  DamageCanvas: {fileID: 7391777244062002976, guid: ed1ff4dc1e8305849ad8d96e3ef672a1, type: 3}
 --- !u!61 &1788342495
 BoxCollider2D:
   m_ObjectHideFlags: 0
