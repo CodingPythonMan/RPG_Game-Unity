@@ -13,6 +13,12 @@ public class Player : MonoBehaviour
     public Vector3 OriPos;
     Animator ani;
 
+    // 마법진
+    public GameObject MagicAura;
+    public Transform T_MagicAura;
+    // 마법공격
+    public GameObject Explosion;
+
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +66,13 @@ public class Player : MonoBehaviour
             yield return null;
         }
     }
+
+    public void SpecialAttack()
+    {
+
+    }
+
+
 
     // Update is called once per frame
     void Update()
