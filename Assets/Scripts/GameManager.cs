@@ -92,7 +92,10 @@ public class GameManager : MonoBehaviour
         }
 
         // 상태표시창
-        StatusShow();
+        if(D_Player.Count > 0)
+        {
+            StatusShow();
+        }
     }
 
 

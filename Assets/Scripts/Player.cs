@@ -134,8 +134,8 @@ public class Player : MonoBehaviour
     {
         Pdata.Hp -= Attack;
         ani.SetTrigger("damage");
-        // 데미지 텍스트 
-        GameObject go = Instantiate(DamageCanvas, transform.position, Quaternion.identity);
+        // 데미지 텍스트
+        GameObject go = Instantiate(DamageCanvas, transform.position+Vector3.up*0.7f, Quaternion.identity);
         // 캔버스에 몬스터를 부모로 하겠다.
         go.transform.SetParent(transform);
 

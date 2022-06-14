@@ -83,7 +83,7 @@ public class Monster : MonoBehaviour
         TMPdamage = go.GetComponentInChildren<TextMeshProUGUI>();
         TMPdamage.text = "" + Attack;
 
-        if(Hp <= 0)
+        if (Hp <= 0)
         {
             GameManager.ins.L_Monster.Remove(gameObject);
             Destroy(gameObject);
