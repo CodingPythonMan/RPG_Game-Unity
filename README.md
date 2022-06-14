@@ -1,5 +1,5 @@
-# Unity-NoName
-- Making Unity Game
+# SimpleTurnRPG
+- Making Unity Game for Portfolio. Using C# Scripts.
 
 # Scene
 ![image](https://user-images.githubusercontent.com/27558778/173578973-bdeb30b7-a8b7-44dc-b468-9fffeeedf0aa.png)
