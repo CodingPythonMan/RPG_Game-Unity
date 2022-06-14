@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Monster : MonoBehaviour
@@ -15,6 +16,10 @@ public class Monster : MonoBehaviour
 
     public int Hp;
     public int MaxHp;
+
+    // 데미지 캔버스
+    public GameObject DamageCanvas;
+    TextMeshProUGUI TMPdamage;
 
     // Start is called before the first frame update
     void Start()
