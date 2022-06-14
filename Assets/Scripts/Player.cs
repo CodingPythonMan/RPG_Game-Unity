@@ -69,10 +69,34 @@ public class Player : MonoBehaviour
 
     public void SpecialAttack()
     {
-
+        if(GameManager.ins.CurrTurn == false)
+        {
+            StartCoroutine("SpecialAttackCT");
+        }
     }
 
+    IEnumerator SpecialAttackCT()
+    {
+        int r = Random.Range(0, Monster.Length);
 
+        Instantiate(MagicAura, T_MagicAura.position, T_MagicAura.rotation);
+        yield return new WaitForSeconds(2.5f);
+    
+        if(Monster[r] != null)
+        {
+            if (!Pdata.Job.Equals("신관"))
+            {
+                Instantiate(Explosion, Monster[r].transform.position + Vector3.up * 0.8f, Quaternion.identity);
+            }
+            else
+            {
+                // 신관
+                GameObject[] Player = GameObject.FindGameObjectsWithTag("Player");
+                int i = Random.Range(0, Player.Length);
+                Instantiate(Explosion, Player[i].transform.position + Vector3.up * 0.8f, Quaternion.identity);
+            }
+        }
+    }
 
     // Update is called once per frame
     void Update()
