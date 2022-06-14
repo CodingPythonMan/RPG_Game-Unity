@@ -53,6 +53,7 @@ public class Player : MonoBehaviour
                     // 공격모션
                     ani.SetTrigger("attack");
                     // 공격사운드
+                    Sound();
                     // 몬스터 공격데미지
                     Monster[r].GetComponent<Monster>().Damage(Pdata.Attack);
 
@@ -64,6 +65,24 @@ public class Player : MonoBehaviour
             }
 
             yield return null;
+        }
+    }
+
+    void Sound()
+    {
+        if(Pdata.Job == "검사")
+        {
+            SoundManager.instance.PlayerAttackSound(8);
+        }
+
+        if (Pdata.Job == "신관")
+        {
+            SoundManager.instance.PlayerAttackSound(4);
+        }
+
+        if (Pdata.Job == "마법사")
+        {
+            SoundManager.instance.PlayerAttackSound(2);
         }
     }
 
