@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2547411280998399596}
   - component: {fileID: 5035094507227397288}
   - component: {fileID: 805871896620453679}
+  - component: {fileID: 167389716}
   m_Layer: 0
   m_Name: swordMagic
   m_TagString: Untagged
@@ -105,3 +106,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &167389716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5964012549129492698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70b8dadcaba3e57419f1fd13f888a275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 1
